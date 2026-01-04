@@ -38,9 +38,12 @@ A production-ish ETL mini project that fetches the **LIVE** “By market capital
 
 ### 1) Create venv + install
 
-```bash
-make install
+```python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+pip install -e .
 ```
+Note: Change the python3 to your python version
 
 ### 2) Run the ETL pipeline (CLI)
 
@@ -115,27 +118,6 @@ Typical columns:
 * `MC_EUR_Billion`
 * `MC_INR_Billion`
 
-### SQLite
-
-`outputs/largest_banks.db` with table `Largest_banks`
-
-You can inspect manually:
-
-```bash
-sqlite3 outputs/largest_banks.db
-```
-
-Example query:
-
-```sql
-SELECT Name, MC_GBP_Billion FROM Largest_banks LIMIT 10;
-```
-
-### Logs
-
-`etl_project_log.txt` records pipeline stages and timestamps (helpful for debugging and auditability).
-
----
 
 ## Run with Docker
 
