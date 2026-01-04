@@ -114,16 +114,6 @@ docker build -t largest-banks-etl .
 mkdir -p outputs
 docker run --rm -v "$PWD/outputs:/app/outputs" largest-banks-etl
 ```
-
-### Override args
-
-```bash
-docker run --rm -v "$PWD/outputs:/app/outputs" largest-banks-etl \
-  largest-banks-etl \
-  --url "https://en.wikipedia.org/wiki/List_of_largest_banks" \
-  --rates "data/exchange_rates.csv"
-```
-
 ---
 
 
