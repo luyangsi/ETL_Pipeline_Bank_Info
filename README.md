@@ -46,9 +46,13 @@ pip install -e .
 ```
 Note: Change the python3 to your python version
 
-### 2) Run the ETL pipeline (CLI)
+### 2) Clone the github files and run the ETL pipeline (CLI)
 
 ```bash
+git clone https://github.com/luyangsi/ETL_Pipeline_Bank_Info.git
+cd ETL_Pipeline_Bank_Info
+
+make install
 make run
 ```
 
