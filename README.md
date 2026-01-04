@@ -126,50 +126,6 @@ docker run --rm -v "$PWD/outputs:/app/outputs" largest-banks-etl \
 
 ---
 
-## Development extras (optional but strong for GitHub)
-
-### Pre-commit (ruff lint + format)
-
-Install dev tools:
-
-```bash
-pip install -r requirements-dev.txt
-pre-commit install
-pre-commit run --all-files
-```
-
-Recommended `requirements-dev.txt`:
-
-```txt
-pytest
-ruff
-pre-commit
-```
-
-Recommended `.pre-commit-config.yaml`:
-
-```yaml
-repos:
-  - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.8.4
-    hooks:
-      - id: ruff
-        args: ["--fix"]
-      - id: ruff-format
-```
-
-Recommended `pyproject.toml` additions:
-
-```toml
-[tool.ruff]
-line-length = 100
-target-version = "py312"
-
-[tool.ruff.lint]
-select = ["E", "F", "I"]
-```
-
----
 
 ## CI (GitHub Actions)
 
