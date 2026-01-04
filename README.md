@@ -82,30 +82,6 @@ make clean
 
 ---
 
-## CLI usage
-
-Run directly (after installation):
-
-```bash
-largest-banks-etl \
-  --url "https://en.wikipedia.org/wiki/List_of_largest_banks" \
-  --rates "data/exchange_rates.csv" \
-  --out-csv "outputs/largest_banks.csv" \
-  --db "outputs/largest_banks.db" \
-  --table "Largest_banks" \
-  --log "etl_project_log.txt"
-```
-
-### Parameters
-
-* `--url`: Wikipedia page URL (live source)
-* `--rates`: path to exchange rate CSV
-* `--out-csv`: output CSV path
-* `--db`: SQLite database file path
-* `--table`: SQLite table name
-* `--log`: log file path
-
----
 
 ## Outputs
 
