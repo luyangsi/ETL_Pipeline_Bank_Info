@@ -192,14 +192,3 @@ Wikipedia HTML can change. If extraction breaks (e.g., empty dataframe / missing
 ### lxml / parsing dependencies
 
 Dockerfile installs system libraries needed for `lxml` (commonly required by HTML table parsing).
-
----
-
-## What data engineering skills are included in this project
-
-This project demonstrates:
-
-* external data ingestion (web)
-* clean transformation logic and reproducible outputs
-* relational persistence (SQLite) + SQL querying
-* logging and basic pipeline ergonomics (CLI + Makefile + Docker + CI)
